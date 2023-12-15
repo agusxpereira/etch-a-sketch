@@ -1,0 +1,10 @@
+Create a webpage with a 16x16 grid of square divs.  
+Este es el primer problema al que nos vamos a encontrar -
+    ¿Cuanto debe medir cada cuadrado? 
+    -tenemos que crear los divs usando javascript
+    -Lo mejor es poner estos cuadrados dentro de otro div llamado 
+    'container' 
+    -Usamos flexblox para hacer los divs parecer un cuadrado y ordenarse 
+    
+2 - seteamos un efecto "hover" para que los divs cambien de color 
+cuando pasamos el mouse sobre ellos .
