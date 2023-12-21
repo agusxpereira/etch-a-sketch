@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <header class="flex-row-centered"><h1>Etch a Sketch</h1></header>
     <div class="container">
-        <div class="display-grid">
-
-
-        </div>
+        <div class="display-grid"></div>
         <div class="display-ui">
+            <button  name="user-pick" id="user-pick">Other number</button>
+            <label for="color-picker">
+                <p>select a color!</p>
+                <input type="color" name="color-picker" id="color-picker">          
+            </label>
+            <button id="clear">clear</buton>
             <button id="grid-create">create grid</button>
         </div>
     </div>
