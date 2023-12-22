@@ -1,6 +1,6 @@
 let userPick = -1;
-let color = document.querySelector('#color-picker').value;
-let rep = (userPick < 100 && userPick > 0) ? userPick: 32;
+let color ;
+let rep = (userPick < 100 && userPick > 0) ? userPick : 32;
 let inter = -1; 
 
 let display = document.querySelector('.display-grid'); 
@@ -9,6 +9,7 @@ let buttonClear = document.querySelector('#clear');
 let buttonUserPick = document.querySelector('#user-pick');
 let buttonRainbow = document.querySelector('#rainbow-mode');
 let buttonStop = document.querySelector('#stop');
+let pickColor = document.querySelector('#color-picker');
 
 function createGrid(rep=32){
     cant = (100 / rep);
@@ -28,9 +29,10 @@ function drawing(e, color="black") {
     e.target.style.backgroundColor = color;
 }
 
-function draw(color="black"){
+function draw(color){
     let divSquares = document.querySelectorAll('.square'); 
     let isDrawing = false;
+    
     divSquares.forEach(div =>  {
         div.addEventListener("mousedown", (e)=>{
             isDrawing = true;                
@@ -60,7 +62,7 @@ function draw(color="black"){
 buttonClear.addEventListener("click", ()=>{
     display.innerHTML = "";
     createGrid();
-    draw(color);
+    draw();
 }); 
 
 buttonUserPick.addEventListener("click",()=>{
@@ -76,8 +78,6 @@ buttonRainbow.addEventListener("click", ()=>{
         let color = ""; 
         inter = setInterval(()=>{
             color = randomColor();
-            console.log(color);
-            console.log(inter);
             draw(color);
         }, 100);
     }
@@ -89,6 +89,14 @@ buttonRainbow.addEventListener("click", ()=>{
     
 });
 
+pickColor.addEventListener("change", ()=>{
+  
+    
+    color = document.querySelector('#color-picker').value;
+    console.log(color);
+    draw(color);
+});
+
 createGrid(rep);
-draw(color);
+draw();
 /*https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event */
