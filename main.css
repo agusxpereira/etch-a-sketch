@@ -54,7 +54,13 @@ button{
 .square{
     margin:0px;
     padding: 0px; 
-    background-color: whitesmoke;
+    background-color: whitesmoke; 
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     
 }
 .display-ui{
