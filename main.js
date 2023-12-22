@@ -35,7 +35,10 @@ function draw(color){
     
     divSquares.forEach(div =>  {
         div.addEventListener("mousedown", (e)=>{
-            isDrawing = true;                
+            isDrawing = true;  
+            if(isDrawing == true){
+                drawing(e, color);
+            }         
         });
         div.addEventListener("mouseover", (e)=>{                 
             if(isDrawing == true){
