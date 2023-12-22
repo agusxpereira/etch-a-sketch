@@ -87,7 +87,7 @@ buttonRainbow.addEventListener("click", ()=>{
     
     buttonStop.addEventListener("click", ()=>{
         clearInterval(inter);
-        draw(color);
+        draw();
     });
     
 });
